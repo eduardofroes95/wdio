@@ -1,29 +1,38 @@
 class homeScreen {
-    get enterLogin() {
-        return $('id:Forms')
+    get clickForms() {
+        return $('~Forms')
     }
 
-    async goToLogin() {
+    async goToForms() {
 
-        this.enterLogin.click()
+       await this.clickForms.click()
     }
 
     get enterForms() {
-        return $('id:text-input')
+        return $('~text-input')
     }
 
     async type() {
-        this.enterForms.click()
-        this.enterForms.addValue('Eduardo')
+        await this.enterForms.click()
+        await this.enterForms.addValue('Eduardo')
 
     }
 
     get switch() {
-        return $('id:switch')
+        return $('~switch')
     }
 
     async clickSwitch() {
-        this.switch.click()
+       await this.switch.click()
+    }
+
+    get dropDown() {
+        return $('//*[@content-desc=“Dropdown”]')
+    }
+    
+    async clickDropdown() {
+        
+        await this.dropDown.click()
     }
 }
 
