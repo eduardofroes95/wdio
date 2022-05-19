@@ -18,6 +18,14 @@ class homeScreen {
 
     }
 
+    get closeForms() {
+        return $('~input-text-result')
+    }
+
+async formsDown() {
+    await this.closeForms.click()
+}
+
     get switch() {
         return $('~switch')
     }
@@ -27,13 +35,15 @@ class homeScreen {
     }
 
     get dropDown() {
-        return $('//*[@content-desc=“Dropdown”]')
+        return $('~Dropdown')
     }
     
     async clickDropdown() {
         
         await this.dropDown.click()
     }
+
+    
 }
 
 module.exports = new homeScreen()
