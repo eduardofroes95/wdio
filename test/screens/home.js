@@ -5,7 +5,7 @@ class homeScreen {
 
     async goToForms() {
 
-       await this.clickForms.click()
+        await this.clickForms.click()
     }
 
     get enterForms() {
@@ -22,28 +22,35 @@ class homeScreen {
         return $('~input-text-result')
     }
 
-async formsDown() {
-    await this.closeForms.click()
-}
+    async formsDown() {
+        await this.closeForms.click()
+    }
 
     get switch() {
         return $('~switch')
     }
 
     async clickSwitch() {
-       await this.switch.click()
+        await this.switch.click()
     }
 
     get dropDown() {
         return $('~Dropdown')
     }
-    
+
     async clickDropdown() {
-        
+
         await this.dropDown.click()
     }
 
-    
+    get dropClick() {
+        // xpath = //tagname[@atribute="value"]
+        return $('//android.widget.CheckedTextView[@text="Appium is awesome"]')
+    }
+
+    async clickDrop() {
+        await this.dropClick.click()
+    }
 }
 
 module.exports = new homeScreen()

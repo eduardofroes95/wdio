@@ -20,6 +20,16 @@ describe('Deve preencher os campos com sucesso', () => {
 
     });
 
-  
+    it('Deve clicar no dropdown e selecionar umas das opções', async () => {
+
+        await homeScreen.clickDropdown()
+
+    });
+
+    it('Deve clicar em uma das opções do DropDown', async  () => {
+        await homeScreen.clickDrop()
+    });
+
+
 
 })
