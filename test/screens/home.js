@@ -51,6 +51,15 @@ class homeScreen {
     async clickDrop() {
         await this.dropClick.click()
     }
+
+    get button() {
+        return $('~button-Inactive')
+    }
+
+    async clickButton() {
+
+        await this.button.click()
+    }
 }
 
 module.exports = new homeScreen()

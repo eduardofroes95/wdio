@@ -26,10 +26,14 @@ describe('Deve preencher os campos com sucesso', () => {
 
     });
 
-    it('Deve clicar em uma das opções do DropDown', async  () => {
+    it('Deve clicar em uma das opções do DropDown', async () => {
         await homeScreen.clickDrop()
     });
 
+    it('Deve clicar em um dos botões', async () => {
 
+        await homeScreen.clickButton()
+
+    });
 
 })
